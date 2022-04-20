@@ -40,7 +40,11 @@ const getUsersData= async function (req, res) {
     let allUsers= await UserModel.find()
     res.send({msg: allUsers})
 }
+const create_User=async function(req,res){
+    res.send({msg:"my first middleware script"})
+}
 
 module.exports.createUser= createUser
 module.exports.getUsersData= getUsersData
 module.exports.basicCode= basicCode
+module.exports.create_User=create_User
